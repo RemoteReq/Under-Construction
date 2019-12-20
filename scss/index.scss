@@ -18,3 +18,47 @@
 
 // import container partials files
 @import './partials/containers/_sampleContainer.scss';
+* {
+  padding: 0;
+  margin: 0;
+}
+.under-construction {
+  display: grid;
+  font-family: sans-serif;
+  height: 100vh;
+  place-items: center;
+  width: 100vw;
+  text-align: center;
+
+  .under-construction-header {
+    img {
+      height: 200px;
+    }
+    h1 {
+      color: #0000ff;
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 380px) {
+  .under-construction {
+    img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    
+    .under-construction-header {
+      h1 {
+
+        font-size: 32px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+    }
+  }
+}
