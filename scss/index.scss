@@ -31,13 +31,12 @@
   text-align: center;
 
   .under-construction-header {
-    img {
-      height: 200px;
-    }
-    h1 {
-      color: #0000ff;
-      font-size: 5rem;
-      margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    .logo-img {
+      margin-bottom: 100px;
+      width: 100px;
     }
   }
   
@@ -45,15 +44,16 @@
 
 @media screen and (max-width: 380px) {
   .under-construction {
-    img {
-      height: 100px;
-      margin-bottom: 10px;
-    }
+    
     
     .under-construction-header {
-      h1 {
+      .logo-img {
+        width: 50px;
+      }
 
-        font-size: 32px;
+      .name-img {
+        width: 90vw;
+        margin-bottom: 20px;
       }
 
       h3 {
