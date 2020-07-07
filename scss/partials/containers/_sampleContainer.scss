@@ -3,10 +3,85 @@
 .under-construction {
   background-color: #FBF9F4;
 
-  .under-construction-header {
+  .under-construction-banner {
     width: calc(100% - 60px);
     height: calc(100% - 60px);
     box-shadow: 1px 1px 10px #dbdbdb;
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (max-width: 1000px) {
+      width: calc(100% - 30px);
+      height: calc(100% - 30px);
+    }
+
+    .under-construction-contents {
+      height: auto;
+    }
+
+    .under-construction-header {
+      display: flex;
+      height: 40%;
+
+      .logo-img {
+        max-width: 80%;
+        height: auto;
+        margin: 0 0 40px 0;
+      }
+
+      .name-img {
+        max-width: 50%;
+        height: auto;
+        margin: 0;
+      }
+    }
+
+    .subscribe-contents {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+
+      @media screen and (max-width: 400px) {
+        margin: 0;
+      }
+
+      p {
+        margin-bottom: 50px;
+        @media screen and (max-width: 400px) {
+          margin: 0;
+        }
+      }
+
+      form {
+        display: flex;
+        width: 50%;
+        
+        @media screen and (max-width: 1000px) {
+          display: block;
+          width: calc(100% - 80px);
+        }
+
+        input {
+          height: 60px;
+          padding: 0 0 0 20px;
+          margin: 0;
+          width: calc(100% - 24px);
+        }
+        
+        button {
+          height: auto;
+
+          @media screen and (max-width: 1000px) {
+            height: 60px;
+            width: 100%;
+          }
+        }
+
+      }
+    }
+
   }
 }

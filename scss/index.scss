@@ -14,7 +14,11 @@
 @import './partials/variables/_defaults.scss';
 
 // import element partials files
-@import './partials/elements/_sample.scss';
+@import './partials/elements/_buttons.scss';
+@import './partials/elements/_inputs.scss';
+@import './partials/elements/_forms.scss';
+@import './partials/elements/_headings.scss';
+@import './partials/elements/_paragraphs.scss';
 
 // import container partials files
 @import './partials/containers/_sampleContainer.scss';
