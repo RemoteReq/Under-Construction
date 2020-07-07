@@ -1,7 +1,12 @@
 // I am just a sample file. Edit me!
 
-.sample-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.under-construction {
+  background-color: #FBF9F4;
+
+  .under-construction-header {
+    width: calc(100% - 60px);
+    height: calc(100% - 60px);
+    box-shadow: 1px 1px 10px #dbdbdb;
+    background-color: #ffffff;
+  }
 }
