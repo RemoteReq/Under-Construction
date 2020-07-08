@@ -3,14 +3,14 @@ import axios from 'axios';
 import RemoteReqIcon from '../../assets/img/remotereqicon.png';
 import RemoteReqName from '../../assets/img/remotereqname.png';
 
-const server = 'localhost:3030/api/subscribers';
+const server = 'http://3.21.186.204:3030/api/subscribe';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
+      emailId: '',
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -22,36 +22,33 @@ class App extends Component {
     e.preventDefault();
 
     this.setState({
-      email: e.target.value,
-    }, () => { console.log(this.state.email); });
+      emailId: e.target.value,
+    });
   }
 
   submitEmail(e) {
     e.preventDefault();
 
-    const { email } = this.state;
+    const { emailId } = this.state;
 
-    if (email) {
+    if (emailId) {
       const body = {
-        email,
+        emailId,
       };
-
       axios.post(server, body)
-        .then((result) => {
-          console.log('result', result);
+        .then(() => {
+          this.resetForm();
         });
     } else {
       console.log('Please enter an email');
     }
-
-    this.resetForm();
   }
 
   resetForm() {
     document.getElementById('subscribe-form').reset();
     this.setState({
-      email: '',
-    }, () => { console.log('form reset, here is the state', this.state); });
+      emailId: '',
+    });
   }
 
   render() {
