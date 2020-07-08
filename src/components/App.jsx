@@ -3,7 +3,7 @@ import axios from 'axios';
 import RemoteReqIcon from '../../assets/img/remotereqicon.png';
 import RemoteReqName from '../../assets/img/remotereqname.png';
 
-const server = 'http://localhost:3030/api/subscribers';
+const server = 'localhost:3030/api/subscribers';
 
 class App extends Component {
   constructor(props) {
